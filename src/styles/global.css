@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.juno.build/assets/fonts/jetbrainsmono-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://cdn.juno.build/assets/fonts/jetbrainsmono-bold.woff2")
+    format("woff2");
+}

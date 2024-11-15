@@ -1,0 +1,45 @@
+<button
+  data-hero
+  aria-label="Copy the npm command to scaffold a Juno project using templates"
+  class="col-span-2 text-center text-lg font-extrabold bg-lavender-blue-500 dark:bg-white text-white dark:text-black dark:hover:text-white py-3 px-4 border-black dark:border-lavender-blue-500 dark:hover:border-white border-[3px] rounded transition-all shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_#7888FF] dark:hover:shadow-[8px_8px_0px_#fff] hover:bg-lavender-blue-400 dark:hover:bg-black active:bg-lavender-blue-600 dark:active:bg-black active:shadow-none active:translate-x-[8px] active:translate-y-[8px]"
+>
+  <span>❯ npm create juno@latest</span>
+  <span data-copied class="opacity-0 transition-opacity">✓</span>
+</button>
+
+<script>
+  const cmd = "npm create juno@latest";
+
+  const animateSuccess = () => {
+    const confirm = document.querySelector<HTMLSpanElement>("[data-copied]");
+
+    if (confirm === null) {
+      return;
+    }
+
+    confirm.style.opacity = "100";
+
+    setTimeout(() => (confirm.style.opacity = "0"), 2000);
+  };
+
+  const copyText = (text: string): Promise<void> =>
+    navigator.clipboard.writeText(text);
+
+  const copy = async () => {
+    await copyText(cmd);
+
+    setTimeout(animateSuccess, 150);
+  };
+
+  const init = () => {
+    const btn = document.querySelector("[data-hero]");
+
+    if (btn === null) {
+      return;
+    }
+
+    btn.addEventListener("click", copy, { passive: true });
+  };
+
+  document.addEventListener("DOMContentLoaded", init, { once: true });
+</script>
