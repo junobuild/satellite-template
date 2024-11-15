@@ -1,6 +1,6 @@
 # Juno: Satellite Template
 
-![A screenshot of the starter kit](https://raw.githubusercontent.com/junobuild/satellite-template/main/screenshots/screenshot-template.png)
+![A screenshot of the template](https://raw.githubusercontent.com/junobuild/satellite-template/main/screenshots/screenshot-template.png)
 
 A template developed as a placeholder for any new [Juno](https://juno.build) Satellites spun up.
 
